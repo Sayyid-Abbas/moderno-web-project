@@ -48,6 +48,7 @@ a {
 /* #endregion End Components */
 /* #region Start Header */
 header {
+  width: 100%;
   position: absolute;
   height: 75px;
   left: 50%;
