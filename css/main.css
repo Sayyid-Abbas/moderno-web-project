@@ -338,6 +338,11 @@ body > .links .social a:hover i {
   font-size: 16px;
   line-height: 1.6;
 }
+@media (max-width: 768px) {
+  .services .container {
+    flex-direction: column;
+  }
+}
 /* #endregion End Services */
 
 
