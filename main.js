@@ -33,7 +33,6 @@ document.onscroll = function() {
 // Services
 
 //Getting the icons
-let icon = document.querySelector(".services-icon");
 let icons = document.querySelectorAll(".services-icon")
 
 document.addEventListener("click", function(e) {
@@ -44,3 +43,27 @@ document.addEventListener("click", function(e) {
         }
     })
 })
+
+// Stories
+
+// Get Content
+let projects = document.querySelectorAll(".project");
+
+// Put active class on clicked box then
+// start a fucntion to show data
+document.addEventListener("click", function(e) {
+    projects.forEach((project) => {
+        if(project.contains(e.target)) {
+            projects.forEach(project => project.classList.remove("active"));
+            project.classList.add("active");
+            showBox(project);
+        }
+    })
+});
+
+// Put the data in the show box
+function showBox(project) {
+    let showBox = document.querySelector(".show-box");
+    showBox.innerHTML = "";
+    showBox.innerHTML = project.innerHTML;
+}
