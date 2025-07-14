@@ -15,7 +15,7 @@ I do not claim ownership of the original design concepts — only the code is mi
 
 - The Services section has simple JS code to switch active elements, highlighting the selected service.
 
-- The stories section got a little bit more code, the idea is when clicking on a project, in the box above will display more information about it.
+- The stories section got a little bit more code, the idea is when clicking on a project, more information about it will be displayed above.
 
 - Finally, in the footer the year of copyright is dynamic using JS 
 
