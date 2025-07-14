@@ -28,6 +28,7 @@ document.addEventListener("click", (e) => {
 document.onscroll = function() {
     links.classList.remove("show");
     bars.classList.add("show");
+    checkScroll();
 }
 
 // Services
@@ -77,7 +78,7 @@ copyrightYear.textContent = new Date().getFullYear();
 
 let button = document.querySelector(".scroll-top");
 
-document.onscroll = function() {
+function checkScroll() {
     if(window.scrollY > 500) {
         button.style.display = "flex";
         setTimeout(() => {
