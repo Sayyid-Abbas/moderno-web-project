@@ -1,4 +1,4 @@
-# [Moderno Website project](https://sayyid-abbas.github.io/moderno-web-project/)
+# Moderno Website project
 
 This project is complete HTML, CSS and JS implementations coded entirely by me.  
 However, the UI/UX design and template concepts for the project are based on existing design created by others.  
@@ -18,7 +18,7 @@ I do not claim ownership of the original design concepts — only the code is mi
 - The stories section got a little bit more code, the idea is when clicking on a project, more information about it will be displayed above.
 
 - Finally, in the footer the year of copyright is dynamic using JS 
-
+- **View The [Project](https://sayyid-abbas.github.io/moderno-web-project/)**
 ## License
 All designs belong to their original creators and are used here with respect to their licenses.
 
