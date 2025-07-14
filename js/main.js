@@ -67,3 +67,29 @@ function showBox(project) {
     showBox.innerHTML = "";
     showBox.innerHTML = project.innerHTML;
 }
+
+// Get the current year for copyright
+let copyrightYear = document.querySelector(".copyright-year");
+copyrightYear.textContent = new Date().getFullYear();
+
+
+// Scroll Top Button 
+
+let button = document.querySelector(".scroll-top");
+
+document.onscroll = function() {
+    if(window.scrollY > 500) {
+        button.style.display = "flex";
+        setTimeout(() => {
+            button.classList.add("show");
+        }, 300);
+    } else {
+        button.classList.remove("show");
+        button.style.display = "none";
+    }
+};
+document.addEventListener("click", (e) => {
+    if(button.contains(e.target)) {
+        window.scrollTo({top: 0, behavior: "smooth"});
+    }
+});

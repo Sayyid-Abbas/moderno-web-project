@@ -47,6 +47,37 @@ a {
     width: 1140px;
   }
 }
+.scroll-top {
+  width: 40px;
+  height: 40px;
+  position: fixed;
+  background-color: var(--second-color);
+  color: white;
+  right: 30px;
+  bottom: 40px;
+  z-index: 99;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+  user-select: none;
+  transition-duration: var(--transition-duration);
+  opacity: 0;
+}
+.scroll-top:hover {
+  background-color: #d54930;
+}
+.scroll-top.show {
+  opacity: 1;
+}
+@media (max-width: 768px) {
+  .scroll-top {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+}
 /* #endregion End Components */
 /* #region Start Header */
 header {
@@ -72,6 +103,7 @@ header .logo {
 header .logo img {
   width: 50px;
   border-radius: 50%;
+  user-select: none;
 }
 header .link-menu {
   display: none;
@@ -94,10 +126,11 @@ header .link-menu i {
   cursor: pointer;
 }
 body > .links {
+  user-select: none;
+  height: 100vh;
   width: 500px;
   opacity: 0;
   background-color: var(--main-color);
-  height: calc(100vh);
   position: fixed;
   right: -500px;
   top: 0;
@@ -112,6 +145,7 @@ body > .links {
 body > .links.show {
   right: 0px;
   opacity: 1;
+  z-index: 2;
 }
 body > .links .close {
   position: absolute;
@@ -124,6 +158,7 @@ body > .links .close {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+  cursor: pointer;
   transition-duration: var(--transition-duration);
 }
 body > .links .close:hover {
@@ -247,6 +282,7 @@ body > .links .social a:hover i {
   color: white;
 }
 .landing .container > h1 {
+  user-select: none;
   font-size: 80px;
   text-transform: uppercase;
   -webkit-text-stroke: 0.4px black;
@@ -272,6 +308,7 @@ body > .links .social a:hover i {
   color: #e2e2e2;
 }
 .landing .container > .get-in-touch a {
+  user-select: none;
   background-color: var(--second-color);
   color: rgb(231, 231, 231);
   padding: 5px 10px;
@@ -391,6 +428,7 @@ body > .links .social a:hover i {
   line-height: 1.6;
 }
 .stories .container .to-show .info .view {
+  user-select: none;
   position: absolute;
   bottom: 75px;
 }
@@ -473,6 +511,10 @@ body > .links .social a:hover i {
 }
 /* #endregion End Stories */
 /* #region Start Contact */
+.contact {
+  padding-top: 80px;
+  padding-bottom: 70px;
+}
 .contact .container .head {
   text-align: center;
   margin-bottom: 80px;
@@ -503,6 +545,7 @@ body > .links .social a:hover i {
   background-color: rgba(122, 122, 122, 0.397);
 }
 .contact .location .text {
+  user-select: none;
   background-color: #333333f0;
   width: 200px;
   height: 100px;
@@ -572,11 +615,18 @@ body > .links .social a:hover i {
   resize: none;
 }
 .contact .form-container form input[type="submit"] {
+  user-select: none;
   grid-area: submit;
   color: white;
   background-color: var(--second-color);
-  font-size: 20px;
+  font-size: 26px;
   text-transform: uppercase;
+  padding: 0px;
+  cursor: pointer;
+  transition-duration: var(--transition-duration);
+}
+.contact .form-container form input[type="submit"]:hover {
+  background-color: #d54930 ;
 }
 .contact .form-container .contact-info {
   flex: 1;
@@ -609,6 +659,9 @@ body > .links .social a:hover i {
   }
   .contact .form-container .contact-info {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
   }
   .contact .form-container .contact-info h3 {
@@ -619,10 +672,51 @@ body > .links .social a:hover i {
   }
 }
 /* #endregion End Contact */
-
-
-
-
-
-
-
+/* #region Start Footer */
+footer {
+  user-select: none;
+  background-color: var(--main-color);
+  height: 100px;
+}
+footer .container {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 20px;
+}
+footer .container .social {
+  display: flex;
+  gap: 20px;
+}
+footer .container .social i {
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #333;
+  transition-duration: var(--transition-duration);
+}
+footer .container .social a:nth-child(2) i {
+  color: #1877f2;
+}
+footer .container .social a:hover i {
+  background-color: black;
+  color: white;
+}
+@media (max-width: 768px) {
+  footer .container .text {
+    font-size: 14px;
+  }
+  footer .container .social i {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+  }
+}
+/* #endregion End Footer */
